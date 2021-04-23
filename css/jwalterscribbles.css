@@ -2,6 +2,10 @@ body{
 	display:flex;
 	justify-content:center;
 	margin-top: 0px;
+	background-image:url('background.jpg');
+	background-position:center;
+	background-color:#d9d3b9;
+	background-repeat:no-repeat;
 }
 @font-face {
 	font-family: Oswald;
@@ -43,13 +47,12 @@ body{
 }
 .button{
 	background-color:#dedec4;
-	border:1px solid black;
-	border-bottom-width:0px;
-	padding:10px;
+	padding:8px;
 	margin:3px;
 	font-family:Oswald;
 	text-decoration:none;
 	color:grey;
+	font-size:25px;
 }
 .active{
 	background-color:beige;
@@ -63,8 +66,14 @@ h1,h2,h3,h4,h5,h6{
 	font-family:Oswald;
 	margin:0px;
 }
+.postTitle{
+	font-size:32px;
+}
 p,li,label{
 	font-family:ARIAL;
+}
+a{
+	color:grey;
 }
 article.sharedrow{
 	 width:60%;
