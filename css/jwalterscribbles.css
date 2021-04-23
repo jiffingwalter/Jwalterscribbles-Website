@@ -1,0 +1,67 @@
+body{
+	display:flex;
+	justify-content:center;
+	margin-top: 0px;
+}
+@font-face {
+	font-family: Oswald;
+	src: url(Oswald.ttf);
+}
+.wrapper{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	width:1100px;
+	background-color:#dedec4;
+}
+.flex{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+}
+
+.row{
+	 flex-direction:row;
+}
+.center{
+	justify-content:center;
+	align-content:center;
+}
+.span{
+	width:100%;
+}
+.button{
+	background-color:#dedec4;
+	border:1px solid black;
+	border-bottom-width:0px;
+	padding:5px;
+	margin:3px;
+	font-family:Oswald;
+	text-decoration:none;
+	color:grey;
+}
+.active{
+	background-color:beige;
+}
+
+/*content*/
+img{
+	width:100%;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family:Oswald;
+}
+p,li,label{
+	font-family:ARIAL;
+}
+.main{
+	background-color:beige;
+}
+/*@media (max-width:1100px){
+	.wrapper{
+		width:100%
+	}
+	.flex{
+		flex-direction:row;
+	}
+}*/
