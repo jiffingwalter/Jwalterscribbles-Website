@@ -14,6 +14,17 @@ body{
 	width:1100px;
 	background-color:#dedec4;
 }
+.main{
+	margin:10px;
+	margin-top:0px;
+}
+
+.container{
+	background-color:beige;
+	padding:25px;
+	margin:15px;
+	margin-top:0px;
+}
 .flex{
 	display:flex;
 	flex-wrap:wrap;
@@ -34,7 +45,7 @@ body{
 	background-color:#dedec4;
 	border:1px solid black;
 	border-bottom-width:0px;
-	padding:5px;
+	padding:10px;
 	margin:3px;
 	font-family:Oswald;
 	text-decoration:none;
@@ -50,18 +61,35 @@ img{
 }
 h1,h2,h3,h4,h5,h6{
 	font-family:Oswald;
+	margin:0px;
 }
 p,li,label{
 	font-family:ARIAL;
 }
-.main{
-	background-color:beige;
+article.sharedrow{
+	 width:60%;
 }
-/*@media (max-width:1100px){
+aside{
+	width:30%;
+}
+@media (max-width:1100px){
 	.wrapper{
 		width:100%
 	}
-	.flex{
+}
+@media (max-width:1000px){
+	article.sharedrow{
+	width:100%;
+	}
+	aside{
+		width:100%;
+		display:flex;
 		flex-direction:row;
 	}
-}*/
+	aside>div,aside>nav{
+		width:50%;
+		}
+	flex{
+		flex-direction:row;
+	}
+}

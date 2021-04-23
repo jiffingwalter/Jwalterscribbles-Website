@@ -6,14 +6,6 @@
 		</title>
 		<link rel="stylesheet" type ="text/css" href="css/jwalterscribbles.css" />
 		<style>
-		@media (max-width:1100px){
-			.wrapper{
-				width:100%
-			}
-			.flex{
-				flex-direction:row;
-			}
-		}
 		</style>
 	</head>
 	<body>
@@ -30,36 +22,38 @@
 					<a class="button" href="avatarcreator.html">Avatar Creator</a>
 				</nav>
 			</header>
-			<table border="1" cellpadding="10" width="75%" class="main">
-				<tr>
-					<td rowspan="0"width="70%">
-						<h2>Recent news</h2>
-						<p><sub>[date]</sub></p>
-						
-						<p>Here's a new piece I just finished!</p>
-						<p><img src="images/peace_final.png" alt="peace drawing" width="50%" height="50%"/></p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere urna ac justo egestas, et efficitur leo iaculis. Donec ut aliquam lacus. Morbi vel eros posuere, volutpat nisl vitae, aliquet augue. Quisque elementum, dui nec condimentum volutpat, sapien nisi sollicitudin risus, a ornare odio metus a neque. Fusce vehicula mollis erat, interdum tempus risus venenatis at. Donec non lacinia lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-					</td>
-					<td height="50">
+			<div class="main flex row">
+				<article class="container sharedrow">
+					<h2>Recent news</h2>
+					<p><sub>[date]</sub></p>
+					
+					<p>Here's a new piece I just finished!</p>
+					<p><img src="images/peace_final.png" alt="peace drawing" width="50%" height="50%"/></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere urna ac justo egestas, et efficitur leo iaculis. Donec ut aliquam lacus. Morbi vel eros posuere, volutpat nisl vitae, aliquet augue. Quisque elementum, dui nec condimentum volutpat, sapien nisi sollicitudin risus, a ornare odio metus a neque. Fusce vehicula mollis erat, interdum tempus risus venenatis at. Donec non lacinia lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+				</article>
+				<aside class="">
+					<div class="container">
 						<form method="GET">
 							<fieldset>
-								<legend><h4>Get updates!</h4></legend>
+								<legend><h3>Get updates!</h3></legend>
 								<label for="email">Email</label><br/>
 								<input id="email" type="email"/><br/><br/>
 								<input name="button" type="submit" value="Submit"/>
 							</fieldset>
 						</form>
-					</td>
-				</tr>
-				<tr>
-					<td height="75%">
-					<ul><h4>Previous news<h4></ul>
-						<li>This week</li>
-						<li>This month</li>
-						<li>This year</li>
-					</td>
-				</tr>
-			</table>
+					</div>
+					<nav class="container">
+						<fieldset>
+							<legend><h3>Previous news</h3></legend>
+							<ul>
+								<li>This week</li>
+								<li>This month</li>
+								<li>This year</li>
+							</ul>
+						</fieldset>
+					</nav>
+				</aside>
+			</div>
 			<footer>
 				<table border="1" cellpadding="10" width="75%">
 					<tr>
