@@ -19,6 +19,7 @@ body{
 	background-color:#dedec4;
 }
 .main{
+	width:100%;
 	margin:10px;
 	margin-top:0px;
 }
