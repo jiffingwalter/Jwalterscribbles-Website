@@ -4,11 +4,8 @@
 		<title>
 		Avatar Creator - Justin's Art
 		</title>
+		<link rel="stylesheet" type ="text/css" href="css/jwalterscribbles.css" />
 		<style>
-		.flex{
-			display:flex;
-			justify-content:center;
-		}
 		select{
 			width:150px;
 		}
@@ -18,106 +15,133 @@
 		</style>
 	</head>
 	<body>
-		<h1 class="flex">Scribble Avatar Creator</h1>
-		<div class="flex">
-			<div id="avatar-preview-box" style="background-color:grey;height:512px;width:512px;margin:50px">
+		<div class="wrapper" style="">
+			<header class="flex span center" style="background-color:#ccccb4;flex-direction:row;">
+				<div class="center">
+					<img src="images/header.png" alt="jwalterscribbles header"/>
+				</div>
+				<nav class="row">
+					<a class="button" href="index.html">Home</a>
+					<a class="button" href="about.html">About Me</a>
+					<a class="button" href="commissions.html">Commissions</a>
+					<a class="button" href="shop.html">Shop</a>
+					<a class="button active" href="avatarcreator.html">Avatar Creator</a>
+				</nav>
+			</header>
+			<div class="main flex row">
+				<article class="container">
+					<h1 class="postTitle">Scribble Avatar Creator</h1>
+					<hr/>
+					<div id="avatar-preview-box" style="background-color:grey;height:512px;width:512px;margin:50px">
+					</div>
+					<form style="padding:0px;">
+						<fieldset>
+							<legend><h3>Features</h3></legend>
+							<label for="headshape"><b>Head & skin color</b></label><br/>
+							<select name="headshape" id="headshape">
+								<option value="headBasic">Basic</option>
+							</select>
+							<input name="skincolor" id="skincolor" type="color" value="#ffffff"/><br/><br/>
+							
+							<label for="hairstyle"><b>Hair</b></label><br/>
+							<select name="hairstyle" id="hairstyle">
+								<option value="hairBald">Bald</option>
+								<option value="hairLayover">Layed over</option>
+								<option value="hairSpiked">Spiked</option>
+								<option value="hairSpikedStraight">Spiked, straight</option>
+								<option value="hairSpikedLong">Spiked, long</option>
+								<option value="hairMohawk">Mohawk</option>
+								
+								<option value="hairWaveyShort">Wavey, short</option>
+								<option value="hairCurly">Curly, short</option>
+								<option value="hairStraightBun">Straight Bun</option>
+								<option value="hairMessyBun">Messy bun</option>
+								
+							</select>
+							<input name="haircolor" id="haircolor" type="color" value="#ffffff"/><br/><br/>
+							
+							<label for="eyeshape"><b>Eyes</b></label><br/>
+							<select name="eyeshape" id="eyeshape">
+								<option value="eyesBasic">Basic</option>
+								<option value="eyesHalf">Half</option>
+								<option value="eyesMad">Mad</option>
+								<option value="eyesSad">Sad</option>
+								<option value="eyesConfused">Confused</option>
+								<option value="eyesWide">Wide</option>
+								<option value="eyesTiny">Tiny</option>
+								<option value="eyesDots">Dots</option>
+								<option value="eyesWeird">Weird</option>
+								<option value="eyesAnime">Anime</option>
+								
+							</select>
+							<input name="eyecolor" id="eyecolor" type="color" value="#ffffff"/><br/><br/>
+							
+							<label for="noseshape"><b>Nose</b></label><br/>
+							<select name="noseshape" id="noseshape">
+								<option value="noseBasic">Basic</option>
+								<option value="noseBig">Big</option>
+								<option value="noseSmall">Small</option>
+								<option value="noseTiny">Tiny</option>
+								<option value="noseWide">Wide</option>
+								<option value="noseAngled">Angled</option>
+								<option value="nosePointy">Pointy</option>
+							</select><br/><br/>
+							
+							<label for="mouthshape"><b>Mouth</b></label><br/>
+							<select name="mouthshape" id="mouthshape">
+								<option value="mouthNeutral">Neutral</option>
+								<option value="mouthSmileSmall">Smile, small</option>
+								<option value="mouthSmileBig">Smile, big</option>
+								<option value="mouthSmileToothy">Smile, toothy</option>
+								<option value="mouthFrownSmall">Frown, small</option>
+								<option value="mouthFrownBig">Frown, big</option>
+								<option value="mouthFrownToothy">Frown, toothy</option>
+								<option value="mouthSlanted">Slanted</option>
+							</select><br/><br/>
+						</fieldset>
+						
+						<fieldset>
+							<legend><h3>Details</h3></legend>
+							<label for="facialhairstyle"><b>Facial hair</b></label><br/>
+							<select name="facialhairstyle" id="facialhairstyle">
+								<option value="facialhairClean">Clean</option>
+								<option value="facialhairStuble">Stuble</option>
+								<option value="facialhairGotee">Gotee</option>
+								<option value="facialhairMustacheSmall">Mustache, humble</option>
+								<option value="facialhairMustacheLarge">Mustache, generous</option>
+								<option value="facialhairBeardSmall">Beard, small</option>
+								<option value="facialhairBeardLarge">Beard, full</option>
+								<option value="facialhairBeardXLarge">Beard, thick</option>
+							</select>
+							<input name="facialhaircolor" id="facialhaircolor" type="color" value="#ffffff"/><br/><br/>
+							
+							<label for="accessories"><b>Accessories</b></label><br/>
+							<select name="accessories" id="accessories">
+								<option value="accessoriesSunglasses">Sunglasses</option>
+								<option value="accessoriesNosePiercing">Nose piercing</option>
+								<option value="accessoriesDoubleNosePiercing">Double nose piercing</option>
+								<option value="accessoriesEarrings">Earrings</option>
+								<option value="accessoriesBigEarrings">Super cool earrings</option>
+							</select><br/><br/>
+							
+							<label for="tattoos"><b>Tattoos</b></label><br/>
+							<select name="tattoos" id="tattoos">
+								<option value="tattooTearDrop">Tear drop</option>
+								<option value="tattooAlwaysTired">Always tired</option>
+								<option value="tattooTribal">Sick tribal tattoo</option>
+								<option value="tattooBushyBrows">Bushy brows</option>
+							</select><br/><br/>
+						</fieldset>
+					</form>
+				</article>
 			</div>
-			<form style="padding:0px;">
-				<h3>Features</h3>
-				<label for="headshape"><b>Head & skin color<b></label><br/>
-				<select name="headshape" id="headshape">
-					<option value="headBasic">Basic</option>
-				</select>
-				<input name="skincolor" id="skincolor" type="color" value="#ffffff"/><br/><br/>
-				
-				<label for="hairstyle"><b>Hair</b></label><br/>
-				<select name="hairstyle" id="hairstyle">
-					<option value="hairBald">Bald</option>
-					<option value="hairLayover">Layed over</option>
-					<option value="hairSpiked">Spiked</option>
-					<option value="hairSpikedStraight">Spiked, straight</option>
-					<option value="hairSpikedLong">Spiked, long</option>
-					<option value="hairMohawk">Mohawk</option>
-					
-					<option value="hairWaveyShort">Wavey, short</option>
-					<option value="hairCurly">Curly, short</option>
-					<option value="hairStraightBun">Straight Bun</option>
-					<option value="hairMessyBun">Messy bun</option>
-					
-				</select>
-				<input name="haircolor" id="haircolor" type="color" value="#ffffff"/><br/><br/>
-				
-				<label for="eyeshape"><b>Eyes</b></label><br/>
-				<select name="eyeshape" id="eyeshape">
-					<option value="eyesBasic">Basic</option>
-					<option value="eyesHalf">Half</option>
-					<option value="eyesMad">Mad</option>
-					<option value="eyesSad">Sad</option>
-					<option value="eyesConfused">Confused</option>
-					<option value="eyesWide">Wide</option>
-					<option value="eyesTiny">Tiny</option>
-					<option value="eyesDots">Dots</option>
-					<option value="eyesWeird">Weird</option>
-					<option value="eyesAnime">Anime</option>
-					
-				</select>
-				<input name="eyecolor" id="eyecolor" type="color" value="#ffffff"/><br/><br/>
-				
-				<label for="noseshape"><b>Nose</b></label><br/>
-				<select name="noseshape" id="noseshape">
-					<option value="noseBasic">Basic</option>
-					<option value="noseBig">Big</option>
-					<option value="noseSmall">Small</option>
-					<option value="noseTiny">Tiny</option>
-					<option value="noseWide">Wide</option>
-					<option value="noseAngled">Angled</option>
-					<option value="nosePointy">Pointy</option>
-				</select><br/><br/>
-				
-				<label for="mouthshape"><b>Mouth</b></label><br/>
-				<select name="mouthshape" id="mouthshape">
-					<option value="mouthNeutral">Neutral</option>
-					<option value="mouthSmileSmall">Smile, small</option>
-					<option value="mouthSmileBig">Smile, big</option>
-					<option value="mouthSmileToothy">Smile, toothy</option>
-					<option value="mouthFrownSmall">Frown, small</option>
-					<option value="mouthFrownBig">Frown, big</option>
-					<option value="mouthFrownToothy">Frown, toothy</option>
-					<option value="mouthSlanted">Slanted</option>
-				</select><br/><br/>
-				
-				<h3>Details</h3>
-				<label for="facialhairstyle"><b>Facial hair</b></label><br/>
-				<select name="facialhairstyle" id="facialhairstyle">
-					<option value="facialhairClean">Clean</option>
-					<option value="facialhairStuble">Stuble</option>
-					<option value="facialhairGotee">Gotee</option>
-					<option value="facialhairMustacheSmall">Mustache, humble</option>
-					<option value="facialhairMustacheLarge">Mustache, generous</option>
-					<option value="facialhairBeardSmall">Beard, small</option>
-					<option value="facialhairBeardLarge">Beard, full</option>
-					<option value="facialhairBeardXLarge">Beard, thick</option>
-				</select>
-				<input name="facialhaircolor" id="facialhaircolor" type="color" value="#ffffff"/><br/><br/>
-				
-				<label for="accessories"><b>Accessories</b></label><br/>
-				<select name="accessories" id="accessories">
-					<option value="accessoriesSunglasses">Sunglasses</option>
-					<option value="accessoriesNosePiercing">Nose piercing</option>
-					<option value="accessoriesDoubleNosePiercing">Double nose piercing</option>
-					<option value="accessoriesEarrings">Earrings</option>
-					<option value="accessoriesBigEarrings">Super cool earrings</option>
-				</select><br/><br/>
-				
-				<label for="tattoos"><b>Tattoos</b></label><br/>
-				<select name="tattoos" id="tattoos">
-					<option value="tattooTearDrop">Tear drop</option>
-					<option value="tattooAlwaysTired">Always tired</option>
-					<option value="tattooTribal">Sick tribal tattoo</option>
-					<option value="tattooBushyBrows">Bushy brows</option>
-				</select><br/><br/>
-				
-			</form>
+			<footer class="flex span center" style="background-color:#ccccb4;flex-direction:row;padding-top:30px;padding-bottom:30px;">
+				<a href="index.html">Home</a>&nbsp &nbsp &nbsp
+				<a href="about.html">About Me</a>&nbsp &nbsp &nbsp
+				<a href="commissions.html">Commissions</a>&nbsp &nbsp &nbsp
+				<a href="shop.html">Shop</a>&nbsp &nbsp &nbsp
+				<a href="avatarcreator.html">Avatar Creator</a>
+			</footer>
 		</div>
 	</body>
 </html>
