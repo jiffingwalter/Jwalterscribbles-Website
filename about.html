@@ -4,41 +4,39 @@
 		<title>
 		About Me - Justin's Art
 		</title>
+		<link rel="stylesheet" type ="text/css" href="css/jwalterscribbles.css" />
 	</head>
 	<body>
-		<header>
-			<table border="1" width="75%">
-				<tr height="150">
-					<td colspan="4"><h1><img src="images/website_portrait.png" alt="website portrait" width="88" height="150"/>JWalterScribbles<h1></td>
-					
-				</tr>
-				<tr height="50">
-					<td width="20%"><a href="index.html">Home</a></td>
-					<td width="20%"><a href="about.html">About Me</a></td>
-					<td width="20%"><a href="commissions.html">Commissions</a></td>
-					<td width="20%"><a href="shop.html">Shop</a></td>
-					<td width="20%"><a href="avatarcreator.html">Avatar Creator</a></td>
-				</tr>
-			</table>
-		</header>
-		<table border="1" cellpadding="10" width="75%">
-			<tr>
-				<td>
-					<h2>About me</h2>
-					<p>
-					<img src="images/personal_portrait.jpg" alt="personal portrait" width="25%" height="25%"/></br>
-					Hi, my name is Justin Walter. I 'm from the Northern Kentucky/Cincinnati area, and I do a lot of art in my freetime. Much of my work is of many styles, from simplistic doodles to large colored projects, mostly being based in fantasy.</p>
-					<p>While art is my main hobby, I'm currently pursuing a degree in computer science at Northern Kentucky University, as well as a minor in media informatics. In the end, I'd like to combine both of these to potentially work on video games at some point in my life, or eventually do art as a full-time job.</p>
-					<p>Other then art, I also enjoy hiking, video games, music, and video editing my own little projects for fun.</p>
-				</td>
-			</tr>
+		<div class="wrapper" style="">
+			<header class="flex span center" style="background-color:#ccccb4;flex-direction:row;">
+				<div class="center">
+					<img src="images/header.png" alt="jwalterscribbles header"/>
+				</div>
+				<nav class="row">
+					<a class="button" href="index.html">Home</a>
+					<a class="button active" href="about.html">About Me</a>
+					<a class="button" href="commissions.html">Commissions</a>
+					<a class="button" href="shop.html">Shop</a>
+					<a class="button" href="avatarcreator.html">Avatar Creator</a>
+				</nav>
+			</header>
+			<div class="main flex row">
+				<article class="container">
+					<h1 class="postTitle">About me</h1>
+					<hr/>
+					<p><img src="images/personal_portrait.jpg" alt="personal portrait" style="width:50%;"/></br>
+					Hi! My name is Justin Walter. I'm from the Northern Kentucky/Cincinnati area, and I do a lot of art in my freetime. Much of my work is of many styles, from simplistic doodles to large colored projects, mostly being based in fantasy.</p>
+					<p>While art is my main hobby, I'm currently pursuing a degree in information technology at Northern Kentucky University, as well as a minor in media informatics. In the end, I'd like to combine both of these to potentially work on video games at some point in my life, or maybe even eventually do art as a full-time job.</p>
+					<p>Other then art, I also enjoy hiking, playing video games, music, and video editing my own little projects for fun.</p>
+				</article>
+			</div>
 		</table>
-		<footer>
-			<table border="1" cellpadding="10" width="75%">
-				<tr>
-					<td><a href="index.html">Home</a>&nbsp &nbsp &nbsp <a href="about.html">About Me</a>&nbsp &nbsp &nbsp <a href="commissions.html">Commissions</a>&nbsp &nbsp &nbsp <a href="shop.html">Shop</a></td>
-				</tr>
-			</table>
-		</footer>
+			<footer class="flex span center" style="background-color:#ccccb4;flex-direction:row;padding-top:30px;padding-bottom:30px;">
+				<a href="index.html">Home</a>&nbsp &nbsp &nbsp
+				<a href="about.html">About Me</a>&nbsp &nbsp &nbsp
+				<a href="commissions.html">Commissions</a>&nbsp &nbsp &nbsp
+				<a href="shop.html">Shop</a>
+			</footer>
+		</div>
 	</body>
 </html>
