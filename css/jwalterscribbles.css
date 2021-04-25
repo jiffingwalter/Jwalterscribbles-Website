@@ -48,6 +48,7 @@ body{
 .button{
 	background-color:#dedec4;
 	padding:8px;
+	padding-top:4px;
 	margin:3px;
 	font-family:Oswald;
 	text-decoration:none;
