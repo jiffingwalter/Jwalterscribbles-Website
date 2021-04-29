@@ -13,12 +13,24 @@
 			width:20px;
 		}
 		#avatar-preview-box{
+			position:relative;
 			background-color:white;
 			height:512px;
 			width:512px;
 			margin:50px;
 			margin-top:20px;
 			border:2px solid grey;
+		}
+		#avatar-preview-box .base{
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:0;
+		}
+		#avatar-preview-box .overlay{
+			position:absolute;
+			top:0;
+			left:0;
 		}
 		</style>
 	</head>
@@ -42,37 +54,45 @@
 					<hr/>
 					<div class="container flex row">
 						<div id="avatar-preview-box" style="">
-							<div id="hair"></div>
-							<div id="eyes"></div>
-							<div id="nose"></div>
-							<div id="mouth"></div>
-							<div id="head"></div>
+							<img src="images/avatar/bodyBasic.png" id="body" class="base"/>
+							<img src="images/avatar/headBasic.png" id="head" class="overlay"/>
+							<img src="images/avatar/mouthNeutral.png" id="mouth" class="overlay"/>
+							<img src="images/avatar/noseBasic.png" id="nose" class="overlay"/>
+							<img src="images/avatar/eyesBasic.png" id="eyes" class="overlay"/>
+							<img src="images/avatar/hairBald.png" id="hair" class="overlay"/>
 						</div>
 						<form style="padding:0px;">
 							<fieldset>
 								<legend><h3>Features</h3></legend>
-								<label for="headshape"><b>Head & skin color</b></label><br/>
+								<label for="headshape"><b>Head</b></label><br/>
 								<select name="headshape" id="headshape" onchange="displayImages()">
 									<option value="headBasic">Basic</option>
+									<option value="headChinPointy">Pointy chin</option>
+									<option value="headChinRounded">Rounded chin</option>
+									<option value="headChinBold">Bold chin</option>
 								</select>
-								<input name="skincolor" id="skincolor" type="color" value="#ffffff" onchange="displayImages()"/><br/><br/>
-								
+								<!--<input name="skincolor" id="skincolor" type="color" value="#ffffff" onchange="displayImages()"/>-->
+								<br/><br/>
 								<label for="hairstyle"><b>Hair</b></label><br/>
 								<select name="hairstyle" id="hairstyle" onchange="displayImages()">
 									<option value="hairBald">Bald</option>
-									<option value="hairLayover">Layed over</option>
+									<option value="hairLayedover">Layed over</option>
+									<option value="hairStraightShort">Straight, short</option>
+									<option value="hairStraightLong">Straight, long</option>
+									<option value="hairStraightBun">Straight Bun</option>
+									<option value="hairWaveyShort">Wavey, short</option>
+									<option value="hairCurlyShort">Curly, short</option>
+									<option value="hairPoofyShort">Poofy, short</option>
+									<option value="hairPoofyBig">Poofy, big</option>
+									<option value="hairBowlcut">Bowlcut</option>
 									<option value="hairSpiked">Spiked</option>
 									<option value="hairSpikedStraight">Spiked, straight</option>
 									<option value="hairSpikedLong">Spiked, long</option>
 									<option value="hairMohawk">Mohawk</option>
-									<option value="hairWaveyShort">Wavey, short</option>
-									<option value="hairCurly">Curly, short</option>
-									<option value="hairStraightBun">Straight Bun</option>
-									<option value="hairMessyBun">Messy bun</option>
-									
+									<option value=""></option>
 								</select>
-								<input name="haircolor" id="haircolor" type="color" value="#ffffff" onchange="displayImages()"/><br/><br/>
-								
+								<!--<input name="haircolor" id="haircolor" type="color" value="#ffffff" onchange="displayImages()"/>-->
+								<br/><br/>
 								<label for="eyeshape"><b>Eyes</b></label><br/>
 								<select name="eyeshape" id="eyeshape" onchange="displayImages()">
 									<option value="eyesBasic">Basic</option>
@@ -87,8 +107,8 @@
 									<option value="eyesAnime">Anime</option>
 									
 								</select>
-								<input name="eyecolor" id="eyecolor" type="color" value="#ffffff" onchange="displayImages()"/><br/><br/>
-								
+								<!--<input name="eyecolor" id="eyecolor" type="color" value="#ffffff" onchange="displayImages()"/>-->
+								<br/><br/>
 								<label for="noseshape"><b>Nose</b></label><br/>
 								<select name="noseshape" id="noseshape" onchange="displayImages()">
 									<option value="noseBasic">Basic</option>
@@ -113,7 +133,7 @@
 								</select><br/><br/>
 							</fieldset>
 							
-							<fieldset>
+							<!--<fieldset>
 								<legend><h3>Details</h3></legend>
 								<label for="facialhairstyle"><b>Facial hair</b></label><br/>
 								<select name="facialhairstyle" id="facialhairstyle" onchange="displayImages()">
@@ -144,17 +164,17 @@
 									<option value="tattooTribal">Sick tribal tattoo</option>
 									<option value="tattooBushyBrows">Bushy brows</option>
 								</select><br/><br/>
-							</fieldset>
+							</fieldset>-->
 						</form>
 					</div>
 				</article>
 				<script>
 					function displayImages(){
-						hair.innerText = hairstyle.value;
-						eyes.innerText = eyeshape.value;
-						nose.innerText = noseshape.value;
-						mouth.innerText = mouthshape.value;
-						head.innerText = headshape.value;
+						document.getElementById("hair").src = 'images/avatar/'+hairstyle.value+'.png';
+						document.getElementById("eyes").src = 'images/avatar/'+eyeshape.value+'.png';
+						document.getElementById("nose").src = 'images/avatar/'+noseshape.value+'.png';
+						document.getElementById("mouth").src = 'images/avatar/'+mouthshape.value+'.png';
+						document.getElementById("head").src = 'images/avatar/'+headshape.value+'.png';
 						
 					}
 					
@@ -171,16 +191,9 @@
 					var facialhaircolor = document.getElementById('facialhaircolor');
 					var accesories = document.getElementById('accessories');
 					var tattoos = document.getElementById('tattoos');
-					//select display ids
-					var hair = document.getElementById('hair');
-					var eyes = document.getElementById('eyes');
-					var nose = document.getElementById('nose');
-					var mouth = document.getElementById('mouth');
-					var head = document.getElementById('head');
 					
 					//initalize display
 					displayImages();
-					
 				</script>
 			</div>
 			<footer class="flex span center" style="background-color:#ccccb4;flex-direction:row;padding-top:30px;padding-bottom:30px;">
