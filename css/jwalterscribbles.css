@@ -78,7 +78,7 @@ p,li,label{
 a{
 	color:grey;
 }
-article.sharedrow{
+.sharedrow{
 	 width:60%;
 }
 aside{
@@ -90,7 +90,7 @@ aside{
 	}
 }
 @media (max-width:1000px){
-	article.sharedrow{
+	.sharedrow{
 	width:100%;
 	}
 	aside{
