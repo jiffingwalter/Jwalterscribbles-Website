@@ -53,6 +53,9 @@ body{
 .button:hover{
 	background-color:#ededde;
 }
+.button:active{
+	background-color:#afaf9d;
+}
 .button.buttonPost{
 	color:beige;
 }
