@@ -25,9 +25,43 @@
 				<article class="container span">
 					<h1 class="postTitle">Shop</h1>
 					<hr/>
-					<h2>Check out my shop on <a target="_blank" href="https://www.etsy.com/shop/jwalterscribbles">Etsy</a>!</h2>
+					<h1>Check out my shop on <a target="_blank" alt="etsy shop link" href="https://www.etsy.com/shop/jwalterscribbles">Etsy</a>!</h1>
 					<p>From posters and prints to mugs, if you'd like to support me, take a look at my shop and see if anything appeals!</p>
-					<p><a target="_blank" href="https://www.etsy.com/shop/jwalterscribbles"><img alt="shop preview" src="images/shop_preview.png" width="80%" height="80%"/></a><h2>plus even more!</h2></p>
+					<h2>Featuring things such as:</h2><br/>
+					<div class="flex span center">
+						<div class="flex row center">
+							<div class="containerInner thumbnail button">
+								<img src="images\shop\mugPeace.jpg" alt="mugs" onclick="gallerySelect(this);" id="initialImage">
+								<a id="mugs" href="https://www.etsy.com/shop/jwalterscribbles?ref=seller-platform-mcnav&section_id=28661733" style="display:none;">Mugs! [$11+]</a>
+							</div>
+							<div class="containerInner thumbnail button">
+								<img src="images\shop\posterYearn.jpg" alt="posters" onclick="gallerySelect(this);">
+								<a id="posters" href="https://www.etsy.com/shop/jwalterscribbles?ref=seller-platform-mcnav&section_id=28661729" style="display:none;">Posters! [$14+]</a>
+							</div>
+							<div class="containerInner thumbnail button">
+								<img src="images\shop\shirtStars.jpg" alt="shirts" onclick="gallerySelect(this);">
+								<a id="shirts" href="https://www.etsy.com/shop/jwalterscribbles?ref=seller-platform-mcnav&section_id=28646668" style="display:none;">Shirts! [$19+]</a>
+							</div>
+							<div class="containerInner thumbnail button">
+								<img src="images\shop\stickerTough.jpg" alt="stickers" onclick="gallerySelect(this);">
+								<a id="stickers" href="https://www.etsy.com/shop/jwalterscribbles?ref=seller-platform-mcnav&section_id=28661737" style="display:none;">Stickers! [$5]</a>
+							</div>
+						</div>
+						<div class="containerInner">
+							<h1><a id="imglink" href=""></a></h1>
+							<img id="expandedImg">
+						</div>
+					</div>
+					<script>
+					function gallerySelect(imgs) {
+						var expandImg = document.getElementById("expandedImg");
+						var imgText = document.getElementById("imglink");
+						var etsyLink = document.getElementById(imgs.alt);
+						expandImg.src = imgs.src;
+						imgText.innerHTML = '<a id="imglink" href="'+etsyLink.href+'">'+etsyLink.innerText+'</a>';
+						}
+					gallerySelect(document.getElementById("initialImage"));
+					</script>
 				</article>
 			</div>
 			<footer class="flex span center" style="background-color:#ccccb4;flex-direction:row;padding-top:30px;padding-bottom:30px;">

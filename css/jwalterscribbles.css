@@ -72,6 +72,9 @@ img{
 	width:100%;
 	height:auto;
 }
+.thumbnail{
+	width:15%;
+}
 .container{
 	background-color:beige;
 	padding:25px;
