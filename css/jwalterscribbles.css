@@ -50,6 +50,9 @@ body{
 	color:grey;
 	font-size:25px;
 }
+.button:hover{
+	background-color:#ededde;
+}
 .button.buttonPost{
 	color:beige;
 }
@@ -104,7 +107,7 @@ a{
 aside{
 	width:30%;
 }
-.postDisplay{
+.displayHidden{
 	display:none;
 }
 @media (max-width:1100px){

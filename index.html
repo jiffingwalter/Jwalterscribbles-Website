@@ -26,35 +26,39 @@
 			<div class="main flex row">
 				<article class="container sharedrow">
 					<h1 class="postTitle">Recent posts</h1><hr/>
-					<div class="containerInner flex">
+					<div id="" class="containerInner flex">
 						<nav class="row">
-							<a class="button" onclick="setActivePost()">Bonansai</a>
-							<a class="button" onclick="setActivePost()">Mr. Bubbles</a>
-							<a class="button" onclick="setActivePost()">Yearn</a>
-							<a class="button" onclick="setActivePost()">Peace</a>
+							<a class="button" href="#activePost" onclick="toggleDisplay(postBonansai)">Bonansai</a>
+							<a class="button" href="#activePost" onclick="toggleDisplay(postBioshock)">Mr. Bubbles</a>
+							<a class="button" href="#activePost" onclick="toggleDisplay(postYearn)">Yearn</a>
+							<a class="button" href="#activePost" onclick="toggleDisplay(postPeace)">Peace</a>
 						</nav>
 					</div>
 					<div id="activePost">
-						<div id="postBonansai">
+						<div id="postBonansai" style="display:block;">
 							<h1>"Bonansai"</h1><!--Title-->
 							<p><sup>8/01/2020</sup></p><!--Date-->
 							<p><img src="images/pieces/bonansai_final.jpg" alt="bonansai final" width="50%" height="50%"></p>
-						</div><hr/>
-						<div id="postBioshock">
+							<hr/>
+						</div>
+						<div id="postBioshock" style="display:none;">
 							<h1>"Mr. Bubbles"</h1><!--Title-->
 							<p><sup>5/13/2020</sup></p><!--Date-->
 							<p><img src="images/pieces/bioshock_final.png" alt="mr. bubbles final" width="50%" height="50%"></p>
-						</div><hr/>
-						<div id="postYearn">
+							<hr/>
+						</div>
+						<div id="postYearn" style="display:none;">
 							<h1>"Yearn"</h1><!--Title-->
 							<p><sup>3/28/2020</sup></p><!--Date-->
 							<p><img src="images/pieces/yearn_final.jpg" alt="yearn final" width="50%" height="50%"></p>
-						</div><hr/><br/>
-						<div id="postPeace">
+							<hr/>
+						</div>
+						<div id="postPeace" style="display:none;">
 							<h1>"Peace"</h1><!--Title-->
 							<p><sup>4/04/2020</sup></p><!--Date-->
 							<p><img src="images/pieces/peace_final.png" alt="peace final" width="50%" height="50%"></p>
-						</div><hr/><br/>
+							<hr/>
+						</div>
 					</div>
 				</article>
 				<aside>
@@ -80,6 +84,21 @@
 					</nav>
 				</aside>
 				<script>
+				function toggleDisplay(input){
+					var post = document.getElementById(input.id);
+					if (post != lastPost){
+						window.lastPost.style.display = "none";
+						console.log(lastPost.id + " hidden!");
+						post.style.display = "block";
+						console.log(post.id + " shown!");
+						lastPost = post;
+					}
+					else{
+						console.log("nada!");
+						return;
+					}
+				}
+				var lastPost = document.getElementById("postBonansai");
 				</script>
 			</div>
 			<footer class="flex span center" style="background-color:#ccccb4;flex-direction:row;padding-top:30px;padding-bottom:30px;">
