@@ -48,7 +48,7 @@
 							</div>
 						</div>
 						<div class="containerInner">
-							<h1><a id="imglink" href=""></a></h1>
+							<h1><a id="imglink" target="_blank" href=""></a></h1>
 							<img id="expandedImg">
 						</div>
 					</div>
@@ -58,7 +58,7 @@
 						var imgText = document.getElementById("imglink");
 						var etsyLink = document.getElementById(imgs.alt);
 						expandImg.src = imgs.src;
-						imgText.innerHTML = '<a id="imglink" href="'+etsyLink.href+'">'+etsyLink.innerText+'</a>';
+						imgText.innerHTML = '<a id="imglink" target="_blank" href="'+etsyLink.href+'">'+etsyLink.innerText+'</a>';
 						}
 					gallerySelect(document.getElementById("initialImage"));
 					</script>
