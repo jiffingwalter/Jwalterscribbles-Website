@@ -25,11 +25,37 @@
 			</header>
 			<div class="main flex row">
 				<article class="container sharedrow">
-					<h1 class="postTitle">Recent news</h1><hr/>
-					<h1>"Peace"</h1>
-					<p><sub>4/04/2020</sub></p>
-					<p><img src="images/peace_final.png" alt="peace drawing" width="50%" height="50%"/></p>
-					<p></p>
+					<h1 class="postTitle">Recent posts</h1><hr/>
+					<div class="containerInner flex">
+						<nav class="row">
+							<a class="button" onclick="setActivePost()">Bonansai</a>
+							<a class="button" onclick="setActivePost()">Mr. Bubbles</a>
+							<a class="button" onclick="setActivePost()">Yearn</a>
+							<a class="button" onclick="setActivePost()">Peace</a>
+						</nav>
+					</div>
+					<div id="activePost">
+						<div id="postBonansai">
+							<h1>"Bonansai"</h1><!--Title-->
+							<p><sup>8/01/2020</sup></p><!--Date-->
+							<p><img src="images/pieces/bonansai_final.jpg" alt="bonansai final" width="50%" height="50%"></p>
+						</div><hr/>
+						<div id="postBioshock">
+							<h1>"Mr. Bubbles"</h1><!--Title-->
+							<p><sup>5/13/2020</sup></p><!--Date-->
+							<p><img src="images/pieces/bioshock_final.png" alt="mr. bubbles final" width="50%" height="50%"></p>
+						</div><hr/>
+						<div id="postYearn">
+							<h1>"Yearn"</h1><!--Title-->
+							<p><sup>3/28/2020</sup></p><!--Date-->
+							<p><img src="images/pieces/yearn_final.jpg" alt="yearn final" width="50%" height="50%"></p>
+						</div><hr/><br/>
+						<div id="postPeace">
+							<h1>"Peace"</h1><!--Title-->
+							<p><sup>4/04/2020</sup></p><!--Date-->
+							<p><img src="images/pieces/peace_final.png" alt="peace final" width="50%" height="50%"></p>
+						</div><hr/><br/>
+					</div>
 				</article>
 				<aside>
 					<div class="container">
@@ -53,6 +79,8 @@
 						</fieldset>
 					</nav>
 				</aside>
+				<script>
+				</script>
 			</div>
 			<footer class="flex span center" style="background-color:#ccccb4;flex-direction:row;padding-top:30px;padding-bottom:30px;">
 				<a href="index.html">Home</a>&nbsp &nbsp &nbsp
